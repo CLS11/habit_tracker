@@ -19,6 +19,7 @@ class LoginPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(
                   height: 50,
@@ -127,12 +128,39 @@ class LoginPage extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Not a member?',
+                        style: TextStyle(
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      const Text(
+                        'Register Now',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
         ),
       ),
-      appBar: AppBar(),
     );
   }
 }
